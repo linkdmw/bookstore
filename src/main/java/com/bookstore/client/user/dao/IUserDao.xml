@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 门店表的映射文件	namespace值为对应接口的全路径 -->
+<mapper namespace="com.bookstore.client.user.dao.IUserDao">
+
+    <!-- 1.查询信息，id值为对应接口中方法的名字
+        resultType指定将查询的结果封装到哪个pojo对象中
+     -->
+    <insert id="insertUser" >
+		insert into user (username,password,gender,email,telephone,introduce,activeCode)
+		values(#{username},#{password},#{gender},#{email},#{telephone},#{introduce},#{activeCode})
+	</insert>
+
+
+	<update id="updateUserState">
+		update user set state = 1
+		where activeCode=#{activeCode}
+	</update>
+
+	<select id="selectEmail" resultType="com.bookstore.commons.beans.User">
+		select * from user
+		where email=#{email}
+	</select>
+
+	<select id="selectUserName" resultType="com.bookstore.commons.beans.User">
+		select * from user
+		where username=#{username}
+	</select>
+
+	<select id="selectUser" resultType="com.bookstore.commons.beans.User">
+		select * from user
+		where username=#{username}
+		and password=#{password}
+	</select>
+
+	<select id="selectUserById" resultType="com.bookstore.commons.beans.User">
+		select * from user where id=#{user_id}
+	</select>
+
+    <update id="updateUserById">
+        update user set PASSWORD=#{password},gender=#{gender},telephone=#{telephone}
+        where id=#{id}
+    </update>
+
+	<!--查看当前登录用户订单-->
+	<resultMap id="orderMap" type="com.bookstore.commons.beans.Order">
+		<id column="id" property="id"/>
+		<association property="user"
+					 javaType="User"
+					 select="selectUserById"
+					 column="user_id"/>
+	</resultMap>
+	<select id="selectOrderByUser" resultMap="orderMap">
+		select *
+		from orders
+		where user_id = #{id}
+	</select>
+
+
+	<!--根据ID查订单-->
+	<select id="selectOrderById" resultType="com.bookstore.commons.beans.Order">
+		select *
+		from orders
+		where id = #{order_id}
+	</select>
+	<select id="selectProductById" resultType="com.bookstore.commons.beans.Product">
+		select *
+		from products
+		where id = #{product_id}
+	</select>
+	<resultMap id="OrderItemMap" type="com.bookstore.commons.beans.OrderItem">
+		<association property="order"
+					 javaType="Order"
+					 select="selectOrderById"
+					 column="order_id"/>
+		<association property="product"
+					 javaType="Product"
+					 select="selectProductById"
+					 column="product_id"/>
+	</resultMap>
+	<select id="selectOrderItemById" resultMap="OrderItemMap">
+		select *
+		from orderitem
+		where order_id = #{id}
+	</select>
+
+
+
+	<!--删除订单三件套-->
+	<delete id="deleteOrderById">
+		delete from orders
+		where id = #{id}
+	</delete>
+	<delete id="deleteOrderItemById">
+		delete from orderitem
+		where order_id = #{id}
+	</delete>
+	<update id="updateProductById">
+		update products
+		set pnum = pnum+#{buyNum}
+		where id = #{id}
+	</update>
+
+
+
+</mapper>

@@ -1,0 +1,22 @@
+spring:
+  mvc:
+    view:
+      suffix: .jsp
+  datasource:
+    #四要素
+    username: root
+    password: 12316
+    url: jdbc:mysql:///huomengwei?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 自定义数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+
+
+#整合mybatis
+mybatis:
+  type-aliases-package: com.bookstore.commons.beans
+
+server:
+  port: 8088
