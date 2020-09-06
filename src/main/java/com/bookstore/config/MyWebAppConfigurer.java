@@ -17,7 +17,11 @@ public class MyWebAppConfigurer implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry){
-        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/admin/**").addPathPatterns("/admin/login/home.jsp");
+        registry.addInterceptor(new LoginInterceptor())
+                .addPathPatterns("/admin/**")
+                .addPathPatterns("/admin/login/home.jsp")
+                .excludePathPatterns("/admin/login/toLogin")
+                .excludePathPatterns("/admin/login/login");
     }
 
     @Bean

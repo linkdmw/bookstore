@@ -30,7 +30,6 @@ public class IUserServiceImpl implements IUserService {
                 +"/client/user/activeUser?activeCode="
                 +user.getActiveCode()
                 +"'>此处</a>进行激活您的账户("+user.getUsername()+")!";
-        System.out.println("邮件信息： "+emailMsg);
         try {
             MailUtils.sendMail(user.getEmail(),emailMsg);
         } catch (MessagingException e) {
@@ -72,7 +71,6 @@ public class IUserServiceImpl implements IUserService {
     //查询当前登录用户订单
     @Override
     public List<Order> findOrderByUser(Integer id) {
-        System.out.println("查询订单，用户id：  "+id.toString());
         return userDao.selectOrderByUser(id);
     }
 

@@ -27,7 +27,9 @@ public class ProductHandler {
 
     //按类别查询
     @RequestMapping("findProductByCategory")
-    public String findProductByCategory(@RequestParam(defaultValue = "1") int pageIndex, String category, Model model){
+    public String findProductByCategory(@RequestParam(defaultValue = "1") int pageIndex,
+                                        String category,
+                                        Model model){
         PageModel pageModel = new PageModel();
         pageModel.setPageIndex(pageIndex);
         //按类别查询
@@ -45,7 +47,9 @@ public class ProductHandler {
 
     //按名称搜索
     @RequestMapping("findProductByName")
-    public String findProductByName(@RequestParam(defaultValue = "1")int pageIndex, String productName,Model model){
+    public String findProductByName(@RequestParam(defaultValue = "1")int pageIndex,
+                                    String productName,
+                                    Model model){
         PageModel pageModel = new PageModel();
         pageModel.setPageIndex(pageIndex);
         List<Product> products = productService.findProductByName(productName,pageModel);
@@ -70,7 +74,6 @@ public class ProductHandler {
     //跳转首页前处理
     @RequestMapping("showIndex")
     public String showIndex(Model model){
-        System.out.println("showIndex执行了！");
         Notice notice = productService.findNoticeRecent();
         model.addAttribute("notice",notice);
         List<Product> products = productService.findWeekHotProduct();

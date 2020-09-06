@@ -63,7 +63,6 @@ public class AdminProductHandler {
         //定义文件保存路径
         String path = session.getServletContext().getRealPath("/productImg");
         String path2 = "G:/ideaProjects/homework/bookstore/src/main/webapp/productImg";
-        System.out.println("文件保存路径:  "+path);
         //防止路径不存在
         File file = new File(path);
         if(!file.exists()){
@@ -149,10 +148,6 @@ public class AdminProductHandler {
     @RequestMapping("download")
     public void download(String year,String month,HttpServletRequest request, HttpServletResponse response) throws IOException {
         List<ProductList> productLists = adminProductService.downloadByTime(year,month);
-        for(ProductList p : productLists){
-            System.out.println("销售榜单： "+p);
-        }
-
     String filename = year + "年" + month + "月销售榜单";
     String sheetName = month + "月销售榜单";
     String titleName = year + "年" + month + "月销售榜单";

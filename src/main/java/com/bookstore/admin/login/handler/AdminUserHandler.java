@@ -22,6 +22,12 @@ public class AdminUserHandler {
     @Autowired
     IAdminUserService adminUserService;
 
+    //跳转到登录界面
+    @RequestMapping("toLogin")
+    public String toAdminLogin(){
+        return "/admin/login/login";
+    }
+
     //管理员登录
     @RequestMapping("login")
     public String login(User user, HttpSession session, Model model){
@@ -43,13 +49,6 @@ public class AdminUserHandler {
             model.addAttribute("login_fail","管理员用户名或密码错误，请重新登录");
             return "/admin/login/login";
         }
-    }
-
-
-    @RequestMapping("test")
-    public String test(){
-        System.out.println("test执行");
-        return "/admin/login/home";
     }
 
 

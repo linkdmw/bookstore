@@ -64,7 +64,6 @@ public class UserHandler {
     @RequestMapping("findEmail")
     @ResponseBody
     public String findEmail(String email){
-        System.out.println("注册邮箱： "+email);
         User user = userService.findEmail(email);
         System.out.println("USER: "+user);
         if(user!=null){
@@ -118,9 +117,6 @@ public class UserHandler {
         user = userService.findUserByLogin(user);
         if(user!=null){
             session.setAttribute("login_user",user);
-        }
-        else {
-            System.out.println("自动登录未成功！");
         }
     }
 

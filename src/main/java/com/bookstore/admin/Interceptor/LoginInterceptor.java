@@ -20,7 +20,6 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String url = request.getRequestURI();
         StringBuffer url2 = request.getRequestURL();
-        System.out.println("拦截器执行了，URL："+url2);
         //System.out.println("拦截器获取URI: "+url);
         //System.out.println("拦截器获取URL: "+url2.toString());
         if(url.endsWith("/login") || url.endsWith(".gif") || url.endsWith(".css") || url.endsWith(".png") || url.endsWith(".jpg")){
