@@ -30,7 +30,7 @@ public class MailUtils {
 		//定义验证信息
 		Authenticator auth = new Authenticator() {
 			public PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("cxwl.h@qq.com", "pdpgtlfxangjdijd");
+				return new PasswordAuthentication("XXXX@qq.com", "XXXXXXX");
 			}
 		};
 
@@ -39,7 +39,7 @@ public class MailUtils {
 
 		Message message = new MimeMessage(session);
 		//设置邮件发送方
-		message.setFrom(new InternetAddress("cxwl.h@qq.com"));
+		message.setFrom(new InternetAddress("xxxxx@qq.com"));
 		//设置邮件接收方
 		message.setRecipient(RecipientType.TO, new InternetAddress(email));
 		//设置邮件主题

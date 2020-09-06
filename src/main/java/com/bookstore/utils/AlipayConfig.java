@@ -18,19 +18,19 @@ public class AlipayConfig {
 //↓↓↓↓↓↓↓↓↓↓请在这里配置您的基本信息↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
 	// 应用ID,您的APPID，收款账号既是您的APPID对应支付宝账号
-	public static String app_id = "2016102400749243";
+	public static String app_id = "XXXXX";
 	
 	// 商户私钥，您的PKCS8格式RSA2私钥
-    public static String merchant_private_key = "MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC2dohS8oo1je0lfpI4gROkW3otuoXKRLs0NwW+bymcrvZ20otvaMiaoROvYNV7JtxSlh31Ve02iU+j88Pzc399CZUOg+BXKu297XOGLwmDOka4+nXrOWvB3uyNl38Jjx9ngHuOLf6JcMHz1WjGEOrSMV6zMLZ/M2VFvsh9bxJTQ7tQqj5hqK1mCAFKLO6NfIpruyCvNSrASujyJiYy0d28eciVSdzZHNWiCemCWxJK4MUZryyxxNNUS8PAl9ShAhNSVprAlws7w4ZGPEoclAQF66bTyprJ+T28p1TJCgtoLtB1AAyNQzXcOX3/bY/xbrh7BHWGFEyuGY1Gzjr5R9stAgMBAAECggEAGpafOucY+MDbw9Dz4cP9Zr/lx/AcOuNVHEDAV4W/XJOqWppHs05jnRTH15CWy0FYbbhuWSfST1YnAs8syLcV5tSUoe7ZrBoXVsvZP75u9m5xi9cDg+l0KGYhtmhTHMN8Ygq49nkBVGnX+X4prGMetM547Ee28EY/BbDNamnbE8LVLg3hTUgb8cmnDcfQoEXgCAwC0Qla1glnc4p2q0Nbv+x1TqRxLvLoZix6x+hdZgvLuxhkEC4anT7B2X96r5smlLivFVUz8wpzbM554vmzv/LcjT4Kl8O5CJgp5hCOnNmdJ+KR1QOUoCqhBZ2j9MDJBzcoffoEk9iq/89ncsWjiQKBgQD87ro8pYmpdfcZH7TsR/41f6B4/PTXa20LJetuY97Kvm8Qm5p4808GOabaHFt3FS88FPnZm8nZcVRAZ2gyAy+MtPJwdhH5sVuHjSGOjk08i3bMHn9B/NHluhIhdDJvI3SwS6RCZUZrxPl2lBHa4aw0qzcMqGl6yb3KGkgv4CSA7wKBgQC4rQUzdMdTcq1TZ/4i+QdNvYN/gyzCpcL3c+6HZ1DQvxhbW1+6BAn7IGpTbCIZBwS/dwHMcwwcYH2fU8oI05mjTQu1ru2vlX5JDMvZl/AReRmJ6UhZV7vURogNXhrgQ9z5QJSE9BsyiO3BZRFbrcov9i8ZfSamana09Cp+MxxtowKBgQDoKE80/1R+ANMPcnTkM6h3fm/S3Yv2dpoeE24nYu/J9EWJXunIfrtYIW6u4Dxr7zvtz+sM+9uoBEeq3b9buGTap/OnmhghsdMrdjUI3kCyg+hErvFrph0a2VFu93KbZFXkw2k/sCmVHbVES+CfoWgo58adja9TjvzvFnSPzRJ0bQKBgQC0A9v9A4lE25T+p3D/kDXBXsluo2QfPMtmwLgzfs81HAFXFCOkxEkiZL+gH9jBAqlrJUs4irC0fI4Xn+phXjn2B6UxbZm9PQDDnlia+1MFBUGSwDZI+I9b5YC7Xw7dqukcggoD65sTUIxJpwYbkrVyuQvCUc86Cq85xoQhThsY9wKBgQDugsHcvABaieHX8jWdZNjFCHtuXfTOz6ccW27FdKoZBBoE/h7Kh49nWvo9mEJbsMVY7gg3ONyK3nqcT/AwcedOch75523HswAQxAQra58LhnMSy69eDxGP8ZpWrWjPjv0pICmYhnLqUlv1L4YT4mybM9n1uwMlybC3BiajON7b5A==";
-	
+    public static String merchant_private_key = "XXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
 	// 支付宝公钥,查看地址：https://openhome.alipay.com/platform/keyManage.htm 对应APPID下的支付宝公钥。
-    public static String alipay_public_key = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq5wsqZLcpyEEq5/H22GnrHvmqn26d5fCbaT0GepvoPu1RZbD6laxJR9Ja8Vkl/lvIPJPMIqqNjbfO2lndZWFx2y/e0WaKq17YsZ5wlsKgPlwmSM15Q48UGJ6s1UXGVuPM+zfiyWYc8To48DnB4Vefk6dJraHe5/YZrfkzPXn5KN0UCuJISmAKtePnIA5m9ecZWZPMJkP/e+AEveQ8jl+yb5/CtpLEysTpBRvUbWJP/LSuBqgz4Hw1UhW4H3RF/PczRUlMWvgJ4tQXtNIdwkiLyr5zxAaTFI50+tUyHCr4zjRwjb8Z064wSn2BpZlVafnorbF2KDjekGkrAfddetOhwIDAQAB";
+    public static String alipay_public_key = "XXXXXXXXXXXXXXXXXXX";
 
 	// 服务器异步通知页面路径  需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-	public static String notify_url = "http://localhost:8080/client/order/paysuccess";
+	public static String notify_url = "http://link666.top:8088/client/order/paysuccess";
 
 	// 页面跳转同步通知页面路径 需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-    public static String return_url = "http://localhost:8080/client/order/paysuccess";
+    public static String return_url = "http://link666.top:8088/client/order/paysuccess";
 
 	// 签名方式
 	public static String sign_type = "RSA2";

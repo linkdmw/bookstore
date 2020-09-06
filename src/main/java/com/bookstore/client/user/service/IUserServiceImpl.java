@@ -26,7 +26,7 @@ public class IUserServiceImpl implements IUserService {
     //注册账户
     @Override
     public int addUser(User user, HttpServletRequest request) {
-        String emailMsg = "点击"+"<a href='http://127.0.0.1:8080"+request.getContextPath()
+        String emailMsg = "点击"+"<a href='http://link666.top:8088"+request.getContextPath()
                 +"/client/user/activeUser?activeCode="
                 +user.getActiveCode()
                 +"'>此处</a>进行激活您的账户("+user.getUsername()+")!";
