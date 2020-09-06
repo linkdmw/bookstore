@@ -1,4 +1,4 @@
-## BookStore爱尚读书公司优购优
+## BookStore爱尚读书优惠购
 
 >   原采用SSM+JSP开发，现移植为SpringBoot。系统包括前台(客户端client)与后台（管理端admin），实现了一个完整的图书电商平台。可供顾客进行用户操作，图书浏览，加购下单，支付宝支付等一系列操作；可供管理员进行商品管理，公告管理，订单管理，榜单查看下载操作。
 
@@ -13,7 +13,7 @@
 
 ### 项目结构图：
 
-![项目结构图](https://github.com/linkdmw/bookstore/blob/master/me.png)
+![项目结构图](https://github.com/linkdmw/bookstore/blob/master/struct.png)
 
 
 ### 项目数据库所用表：
